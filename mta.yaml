@@ -4,26 +4,6 @@ parameters:
   deploy_mode: html5-repo
 version: 0.0.1
 modules:
-  - name: mta-uitest-approuter
-    type: approuter.nodejs
-    path: mta-uitest-approuter
-    parameters:
-      disk-quota: 256M
-      memory: 256M
-    requires:
-      - name: mta_UItest_html5_repo_runtime
-      - name: uaa_mta_UItest
-  - name: mta_UItest_ui_deployer
-    type: com.sap.html5.application-content
-    path: mta_UItest_ui_deployer
-    requires:
-      - name: mta_UItest_html5_repo_host
-    build-parameters:
-      requires:
-        - name: UItest
-          artifacts:
-            - './*'
-          target-path: resources/UItest
   - name: UItest
     type: html5
     path: UItest
