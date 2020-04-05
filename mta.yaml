@@ -28,10 +28,7 @@ modules:
     type: html5
     path: UItest
     build-parameters:
-      builder: custom
-      commands:
-        - npm install
-        - npm run build
+      builder: grunt
       supported-platforms: []
       build-result: dist
 resources:
